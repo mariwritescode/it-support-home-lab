@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project builds on the **Active Directory Administration Lab** by simulating common Help Desk and IT support tasks in a Windows Server 2025 environment. Using realistic support tickets, I diagnosed and resolved issues involving file share permissions, mapped network drives, DNS, and Active Directory while documenting each case in Jira Service Management and creating supporting knowledge base articles.
+This project uses the same Windows Server 2025 Active Directory environment as the Active Directory Home Lab to simulate common Help Desk and IT support tasks. Through realistic support tickets, I diagnosed and resolved issues involving file share permissions, mapped network drives, DNS, and Active Directory while documenting each incident in Jira Service Management and creating supporting knowledge base articles.
 
 The lab includes:
 - Managing Active Directory users and security groups
