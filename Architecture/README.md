@@ -1,4 +1,4 @@
-# IT Support Home Lab Architecture
+# Architecture
 
 ## Network Diagram
 
