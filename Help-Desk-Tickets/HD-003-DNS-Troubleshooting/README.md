@@ -2,47 +2,38 @@
 
 ## Incident Summary
 
-A workstation was unable to properly resolve domain resources within the RockyPetSupply.local environment.
+Penny Paws reported that her domain-joined workstation was unable to access network resources or resolve **RockyPetSupply.local**. Initial troubleshooting indicated a DNS configuration issue affecting Active Directory name resolution.
 
 ## Environment
 
-* Domain: RockyPetSupply.local
-* Domain Controller: RPS-DC01
-* DNS Server: 192.168.10.10
-* Workstation: RPS-WS01
-
-## Problem
-
-The workstation experienced name resolution issues when attempting to access domain resources.
+- **Domain:** `RockyPetSupply.local`
+- **Domain Controller:** `RPS-DC01`
+- **DNS Server:** `192.168.10.10`
+- **Workstation:** `RPS-WS01`
+- **User:** Penny Paws
 
 ## Investigation
 
-* Verified network connectivity.
-* Performed DNS testing using nslookup.
-* Reviewed workstation DNS configuration.
-* Compared current settings against the domain controller configuration.
+To identify the cause of the issue, I:
+
+- Verified network connectivity between the workstation and domain controller.
+- Tested DNS resolution using `nslookup`.
+- Reviewed the workstation's DNS configuration.
+- Compared the configured DNS server with the domain controller's settings.
 
 ## Root Cause
 
-The workstation was configured with an incorrect DNS server, preventing Active Directory name resolution.
+The workstation was configured to use an incorrect DNS server, preventing it from resolving Active Directory domain resources.
 
 ## Resolution
 
-* Updated the Preferred DNS Server to 192.168.10.10.
-* Flushed the DNS resolver cache.
-* Retested domain name resolution.
+- Updated the **Preferred DNS Server** to `192.168.10.10`.
+- Flushed the DNS resolver cache using `ipconfig /flushdns`.
+- Retested domain name resolution with `nslookup`.
 
 ## Verification
 
-The workstation successfully resolved RockyPetSupply.local using nslookup and domain resources became accessible.
-
-## Skills Demonstrated
-
-* DNS Troubleshooting
-* Active Directory Support
-* Network Troubleshooting
-* Windows Administration
-* Incident Documentation
+Penny successfully resolved **RockyPetSupply.local**, and access to domain resources was restored, confirming the issue had been resolved.
 
 ## Supporting Screenshots
 
