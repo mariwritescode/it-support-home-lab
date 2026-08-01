@@ -2,48 +2,38 @@
 
 ## Incident Summary
 
-User Penny Paws reported receiving an "Access Denied" error when attempting to access the Accounting department shared folder.
+Penny Paws reported receiving an **"Access Denied"** error when attempting to open the Accounting department shared folder from her domain-joined workstation.
 
 ## Environment
 
-* Domain: RockyPetSupply.local
-* Domain Controller: RPS-DC01
-* Workstation: RPS-WS01
-* User: Penny Paws
-* Security Group: Accounting_Users
-
-## Problem
-
-The user was unable to access the Accounting shared folder despite being assigned to the Accounting department.
+- **Domain:** RockyPetSupply.local
+- **Domain Controller:** RPS-DC01
+- **Workstation:** RPS-WS01
+- **User:** Penny Paws
+- **Security Group:** Accounting_Users
 
 ## Investigation
 
-* Verified user account was active.
-* Confirmed membership in the Accounting_Users security group.
-* Reviewed share permissions on the Accounting folder.
-* Reviewed NTFS permissions on the shared folder.
+To isolate the issue, I:
+
+- Verified the user account was active.
+- Confirmed membership in the **Accounting_Users** security group.
+- Reviewed the Accounting share permissions.
+- Inspected NTFS permissions on the shared folder.
 
 ## Root Cause
 
-The Accounting_Users security group had been removed from the NTFS permissions assigned to the Accounting folder.
+The **Accounting_Users** security group had been removed from the folder's NTFS permissions, preventing authorized users from accessing the shared resource.
 
 ## Resolution
 
-* Restored Accounting_Users permissions.
-* Verified inherited permissions were functioning correctly.
-* Tested access from the workstation.
+- Restored the required NTFS permissions.
+- Verified permission inheritance.
+- Tested access from the user's workstation.
 
 ## Verification
 
-The user successfully accessed the Accounting share and opened the Quarterly_Budget.txt document.
-
-## Skills Demonstrated
-
-* Active Directory Administration
-* Security Group Management
-* NTFS Permissions
-* File Share Troubleshooting
-* End-User Support
+Penny successfully accessed the Accounting share and opened the **Quarterly_Budget.txt** file, confirming the issue was resolved.
 
 ## Supporting Screenshots
 
