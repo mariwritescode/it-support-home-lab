@@ -4,49 +4,27 @@
 
 ![Network Diagram](network-diagram.png)
 
-## Environment Overview
+## Environment
 
-The lab consists of a Windows Server 2025 Domain Controller and a Windows 11 domain-joined workstation connected through an internal VirtualBox network.
+The lab consists of a Windows Server 2025 domain controller and a Windows 11 workstation connected through an isolated VirtualBox internal network. The environment simulates a small business Active Directory infrastructure used to practice common Help Desk and systems administration tasks.
 
-### Components
+### Domain
+- **Domain:** RockyPetSupply.local
 
-**RPS-DC01 (Windows Server 2025)**
+### Domain Controller
+- **Hostname:** RPS-DC01
+- **IP Address:** 192.168.10.10
+- **Services:** Active Directory Domain Services (AD DS), DNS, File Shares
 
-* Active Directory Domain Services (AD DS)
-* DNS Server
-* File Shares
-* User and Group Management
+### Workstation
+- **Hostname:** RPS-WS01
+- **IP Address:** 192.168.10.20
+- **Status:** Domain Joined
 
-**RPS-WS01 (Windows 11)**
+## Lab Workflow
 
-* Domain Joined Workstation
-* End User Testing
-* Mapped Network Drives
-* DNS Troubleshooting
-
-**Jira Service Management**
-
-* Incident Tracking
-* Ticket Documentation
-* Resolution Tracking
-
-### Network
-
-Domain:
-RockyPetSupply.local
-
-Domain Controller:
-RPS-DC01
-192.168.10.10
-
-Workstation:
-RPS-WS01
-192.168.10.20
-
-### Demonstrated Scenarios
-
-* File Share Permission Troubleshooting
-* Network Drive Mapping
-* DNS Resolution Troubleshooting
-* Active Directory Administration
-* Help Desk Ticket Management
+1. User logs into the domain.
+2. Authentication is handled by Active Directory.
+3. DNS resolves domain resources.
+4. The user accesses shared folders and mapped drives.
+5. Issues are documented and resolved through Jira Service Management.
