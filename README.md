@@ -1,22 +1,38 @@
-# IT-Support-Home-Lab
-
-Windows Server 2025 Active Directory and Help Desk home lab featuring user account management, file share permissions, network drive mapping, DNS troubleshooting, Jira Service Management ticketing, and knowledge base documentation.
+# IT Support Home Lab
 
 ## Overview
 
-This project simulates common Help Desk and IT Support tasks in a Windows Server 2025 Active Directory environment.
+This project builds on the **Active Directory Administration Lab** by simulating common Help Desk and IT support tasks in a Windows Server 2025 environment. Using realistic support tickets, I diagnosed and resolved issues involving file share permissions, mapped network drives, DNS, and Active Directory while documenting each case in Jira Service Management and creating supporting knowledge base articles.
 
-The lab demonstrates:
+The lab includes:
+- Managing Active Directory users and security groups
+- Configuring NTFS and file share permissions
+- Mapping and troubleshooting network drives
+- Diagnosing and resolving DNS issues
+- Documenting incidents in Jira Service Management
+- Creating knowledge base articles for common support issues
 
-- Active Directory administration
-- User and group management
-- NTFS permissions
-- File share permissions
-- Network drive mapping
-- DNS troubleshooting
-- Jira Service Management ticketing
-- Technical documentation
-- Knowledge Base creation
+### Example Help Desk Scenarios
+
+- **HD-001: User Unable to Access Accounting Share** – Diagnosed NTFS permission issues preventing access to a departmental file share and restored the appropriate permissions.
+- **HD-002: Accounting Network Drive Missing** – Restored a missing mapped network drive and verified successful user access.
+- **HD-003: Workstation Unable to Resolve Domain Resources** – Diagnosed and corrected DNS configuration issues preventing access to domain resources.
+
+This lab demonstrates the troubleshooting, documentation, and customer support responsibilities commonly performed by an IT Support or Help Desk technician.
+
+## Environment
+
+### Domain Controller
+- **Operating System:** Windows Server 2025
+- **Services:** Active Directory Domain Services (AD DS), DNS
+- **Resources:** File Shares
+
+### Workstation
+- **Operating System:** Windows 11
+- **Status:** Domain Joined
+
+### Ticketing Platform
+- Jira Service Management
 
 ## Repository Structure
 
@@ -36,36 +52,3 @@ IT-Support-Home-Lab
 │
 └── README.md
 ```
-
-## Environment
-
-### Domain Controller
-
-- Windows Server 2025
-- Active Directory Domain Services (AD DS)
-- DNS
-- File Shares
-
-### Workstation
-
-- Windows 11
-- Domain Joined
-- User Testing
-
-### Ticketing Platform
-
-- Jira Service Management
-
-## Help Desk Scenarios
-
-### HD-001: User Unable to Access Accounting Share
-
-Troubleshot NTFS permissions preventing access to a departmental file share.
-
-### HD-002: Accounting Network Drive Missing
-
-Restored a missing mapped network drive and verified user access.
-
-### HD-003: Workstation Unable to Resolve Domain Resources
-
-Diagnosed and corrected DNS configuration issues preventing domain resource resolution.
