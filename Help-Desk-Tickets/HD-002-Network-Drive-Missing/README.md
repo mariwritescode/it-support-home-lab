@@ -2,48 +2,38 @@
 
 ## Incident Summary
 
-User Penny Paws reported that the mapped Accounting (A:) network drive was no longer visible in File Explorer.
+Penny Paws reported that the **Accounting (A:)** network drive was no longer visible in File Explorer, preventing access to departmental files stored on the shared network drive.
 
 ## Environment
 
-* Domain: RockyPetSupply.local
-* Domain Controller: RPS-DC01
-* Workstation: RPS-WS01
-* User: Penny Paws
-* Network Share: \RPS-DC01\Accounting
-
-## Problem
-
-The Accounting network drive had disappeared from the workstation, preventing access to department files.
+- **Domain:** RockyPetSupply.local
+- **Domain Controller:** RPS-DC01
+- **Workstation:** RPS-WS01
+- **User:** Penny Paws
+- **Network Share:** `\\RPS-DC01\Accounting`
 
 ## Investigation
 
-* Verified connectivity to the domain controller.
-* Confirmed the Accounting share existed on the server.
-* Reviewed existing mapped drives.
-* Examined network drive configuration.
+To determine the cause of the issue, I:
+
+- Verified connectivity to the domain controller.
+- Confirmed the Accounting share was available on the server.
+- Reviewed existing mapped network drives.
+- Examined the workstation's network drive configuration.
 
 ## Root Cause
 
-The network drive mapping had been removed from the workstation.
+The Accounting network drive mapping had been removed from the workstation, preventing the shared folder from appearing in File Explorer.
 
 ## Resolution
 
-* Remapped drive A: to \RPS-DC01\Accounting.
-* Enabled reconnect at sign-in.
-* Verified successful connection to the shared folder.
+- Remapped drive **A:** to `\\RPS-DC01\Accounting`.
+- Enabled **Reconnect at sign-in** to persist the mapping after future logins.
+- Verified successful access to the shared folder.
 
 ## Verification
 
-The Accounting drive appeared in File Explorer and the user successfully opened Quarterly_Budget.txt.
-
-## Skills Demonstrated
-
-* Network Drive Mapping
-* File Share Administration
-* Windows Troubleshooting
-* End-User Support
-* Incident Documentation
+The Accounting drive reappeared in File Explorer, and Penny successfully opened **Quarterly_Budget.txt**, confirming the issue was resolved.
 
 ## Supporting Screenshots
 
